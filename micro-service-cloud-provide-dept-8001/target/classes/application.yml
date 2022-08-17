@@ -1,0 +1,48 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: mocroServiceCloudProviderDept
+    # ΢�������ƣ����Ⱪ©��΢�������� ʮ����Ҫ
+
+    ### jdbc����
+#  datasource:
+#    username:
+#    password:
+#    url:
+#    driver-class-name: com.mysql.jdbc.Driver
+
+######�����spring.config.import=configserver:##################
+#cloud.config.enabled:false
+
+######################mybatis����
+# mybatis:
+  #  mapper-locations:
+  #  type-aliases-package:
+    # configuration:
+  #   map-underscore-to-camel-case: true # �շ�������
+
+##########spring cloud�Զ���������ƺ�ip��ַ
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      #   ��ַʱ7001ע������ ��application.yml �б�©������ע���ַ����Ⱥ��
+  instance:
+    instance-id: spring-cloud-provider-8001
+    # �Զ������������Ϣ
+    prefer-ip-address: true
+    # ��ʾ����·����ip
+
+######## sppring cloud ʹ��spring boot actuator���������Ϣ
+# Spring Boot 2.50�� actuator ��������˴�����Ľڵ㣬ֻ��¶�� heath �ڵ㣬�������ã�*������Ϊ�˿������еĽڵ�
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # ��yml��* ���ڹؼ��֣�������Ҫ�Ҽ�����
+info:
+  app.name: micro-service-cloud-provider-dept
+  company.name: com.cloud.demo
+  build.aetifactId: micro-service-cloud-provide-dept-8001
+  build.version: 0.0.1-SNAPSHOT
