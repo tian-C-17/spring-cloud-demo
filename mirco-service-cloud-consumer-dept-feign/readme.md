@@ -9,3 +9,5 @@ org.springframework.boot.logging.LogLevel>
 解决： level的子没有正常空格
 
 问题， 开始日志不打印，也不知道碰到哪里，日志打印正常了
+
+此是对ribbon的进一步封装，仍实在ribbon基础上使用
