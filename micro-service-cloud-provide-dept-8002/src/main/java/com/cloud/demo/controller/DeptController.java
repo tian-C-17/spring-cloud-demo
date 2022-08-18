@@ -23,7 +23,7 @@ public class DeptController {
 
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
     public Dept get(@PathVariable("id") int id) {
-        System.out.println("----------------8080808080-----------");
+        System.out.println("----------------80022222222222-----------");
         return deptService.get(id);
     }
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)

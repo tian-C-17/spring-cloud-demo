@@ -13,7 +13,7 @@ public class DeptServiceImpl implements DeptService {
     @Override
     public Dept get(Integer deptNo) {
         Dept dept = new Dept();
-        dept.setDeptNo(8001);
+        dept.setDeptNo(8003);
         dept.setDeptName("管理");
         return dept;
     }
@@ -24,10 +24,10 @@ public class DeptServiceImpl implements DeptService {
         for (int i = 0; i <10 ; i++) {
             Dept dept = new Dept();
             dept.setDeptNo(i);
-            dept.setDeptName("管理8001"+i+"部");
+            dept.setDeptName("管理8003"+i+"部");
             list.add(dept);
         }
-        System.out.println("---------------****80808080808****************");
+        System.out.println("---------------****800000003***************");
         return list;
     }
 }

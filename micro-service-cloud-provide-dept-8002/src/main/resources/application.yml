@@ -1,8 +1,9 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     name: mocroServiceCloudProviderDept  #微服务名称，对外暴漏的微服务名称，十分重要
+    #微服务名称，不做修改，与 micro-service-cloud-provider-dept-8001 的配置保持一致
 
 ##########spring cloud
 eureka:

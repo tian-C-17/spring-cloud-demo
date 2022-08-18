@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+eureka:
+  client:
+    fetch-registry: true # 表示自己是消费者，去注册中心获取服务
+    register-with-eureka: false #
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka/
+
