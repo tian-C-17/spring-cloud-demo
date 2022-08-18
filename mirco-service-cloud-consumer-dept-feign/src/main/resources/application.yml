@@ -20,3 +20,30 @@ logging:
     com.cloud.demo.service.DeptFeignService: debug
   #net.biancheng.c.service.DeptFeignService 是开启 @FeignClient 注解的接口（即服务绑定接口）的完整类名。也可以只配置部分路径，表示监控该路径下的所有服务绑定接口
   #debug：表示监听该接口的日志级别
+
+##### 客户端降级  hystrix
+feign:
+  hystrix:
+    enabled: true #开启客户端 hystrix
+
+#########hystrix
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 7000
+            # Hystrix 可以来为所有请求（方法）设置超时时间（单位为毫秒），若请求超时则触发全局的回退方法进行处理。
+####################配置具体方法超时时间 为 3 秒########################
+    DeptHystrixService#deptInfo_Timeout(Integer):
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+            # Hystrix 还可以为某个特定的服务请求（方法）设置超时时间，格式如下：
+# hystrix.command.xxx#yyy(zzz).execution.isolation.thread.timeoutInMilliseconds=mmm
+#xxx：为包含该服务方法的类的名称（通常为服务绑定接口的名称），例如 DeptHystrixService 接口。
+  #yyy：服务方法名，例如 deptInfo_Timeout() 方法。
+  #zzz：方法内的参数类型，例如 Integer、String 等等
+  #mmm：要设置的超时时间，单位为毫秒（1 秒 =1000 毫秒）

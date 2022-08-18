@@ -11,3 +11,8 @@ org.springframework.boot.logging.LogLevel>
 问题， 开始日志不打印，也不知道碰到哪里，日志打印正常了
 
 此是对ribbon的进一步封装，仍实在ribbon基础上使用
+
+
+------
+
+hystrix  关联8004 项目，进行客户端降级

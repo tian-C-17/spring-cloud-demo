@@ -28,6 +28,7 @@
         <module>micro-service-cloud-provide-dept-8003</module>
         <module>mirco-consumer-dept-8080</module>
         <module>mirco-service-cloud-consumer-dept-feign</module>
+        <module>mirco-service-cloud-provider-dept-hystrix-8004</module>
     </modules>
 
     <properties>
