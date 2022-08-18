@@ -27,6 +27,7 @@
         <module>micro-service-cloud-provide-dept-8002</module>
         <module>micro-service-cloud-provide-dept-8003</module>
         <module>mirco-consumer-dept-8080</module>
+        <module>mirco-service-cloud-consumer-dept-feign</module>
     </modules>
 
     <properties>

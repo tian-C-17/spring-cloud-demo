@@ -28,6 +28,13 @@ public class DeptController {
     }
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
     public List<Dept> list() {
+//        try{
+        // 测试openfeign 超时添加
+//            Thread.sleep(2000);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+
         return deptService.selectAll();
     }
 }
