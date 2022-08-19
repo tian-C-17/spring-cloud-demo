@@ -30,6 +30,7 @@
         <module>mirco-service-cloud-consumer-dept-feign</module>
         <module>mirco-service-cloud-provider-dept-hystrix-8004</module>
         <module>mirco-service-cloud-consumer-hystrix-dashboard</module>
+        <module>mirco-service-cloud-gateway-8006</module>
     </modules>
 
     <properties>
