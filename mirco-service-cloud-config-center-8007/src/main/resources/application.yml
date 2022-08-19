@@ -1,0 +1,25 @@
+server:
+  port: 8007
+spring:
+  application:
+    name: spring-cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tian-C-17/spring-properties.git
+          search-paths:
+            - spring-properties
+          force-pull: true
+          # 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          username: 2650128604@qq.com
+          password: xixi@1234
+        # Git 地址，https://gitee.com/java-mohan/springcloud-config.git
+        # 码云（gitee）地址 uri: https://github.com/javmohan/springcloud-config.git  (github 站点访问较慢，因此这里我们使用 gitee)
+      label: master # 分支名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka/
+
+
